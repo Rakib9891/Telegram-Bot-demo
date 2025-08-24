@@ -1,11 +1,12 @@
 from typing import Final
 from telegram import Update, WebAppInfo, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler, ContextTypes
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 
-
-
-TOKEN: Final = '8292076957:AAHUjvx_rB3qAnsQoypjIDDMn76Ka9g6JJY'
+TOKEN: Final = os.getenv("BOT_TOKEN")
 BOT_USERNAME: Final = '@Digita_Mart_bot'
 
 PRODUCTS = [
